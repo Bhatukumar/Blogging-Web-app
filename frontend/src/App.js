@@ -5,7 +5,7 @@ import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
-import { BrowserRouter as Router, Route, Switch,Link} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 // Ensure you're using the correct import syntax without an alias for Switch
 
 function App() {
