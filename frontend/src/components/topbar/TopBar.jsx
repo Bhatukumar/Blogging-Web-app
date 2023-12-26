@@ -1,8 +1,9 @@
 
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./topbar.css";
 
 export default function Topbar() {
-  
+  const user=true; 
   return (
     <div className="top">
       <div className="topLeft">
@@ -14,39 +15,54 @@ export default function Topbar() {
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-           
-              HOME
+           <Link to="/" >
+           HOME
+           </Link>
+             
           
           </li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
+          <li className="topListItem"><Link className="link" to="/">ABOUT</Link></li>
+          <li className="topListItem"><Link className="link" to="/contact">CONTACT</Link></li>
           <li className="topListItem">
-           
-              WRITE
-           
+          <Link className="link" to="/write">WRITE</Link>
+          </li>
+          <li className="topListItem">
+          {user && "LOGOUT"}
+          
           </li>
           
         </ul>
       </div>
       <div className="topRight">
+        {
+          user? (
         
             <img
               className="topImg"
               src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
               alt=""
             />
-          
+          ) :(
+            <>
+            <Link className="link" to="/login">LOGIN</Link>
+            <Link className="link" to="/register">REGISTER</Link>
+            </>
+           
+          )
+        }
         
           <ul className="topList">
             <li className="topListItem">
-            
-                LOGIN
+            <Link className="link" to="/login">
+            LOGIN
+            </Link>
+               
              
             </li>
             <li className="topListItem">
-              
-                REGISTER
-             
+            <Link className="link" to="/register">
+              REGISTER
+            </Link>
             </li>
           </ul>
        
