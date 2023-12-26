@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Switch,Link} from "react-router-dom";
 
 function App() {
 
-  const currentUser = true;
+  const user = true;
   return (
    <Router>
     <TopBar/>
@@ -22,15 +22,15 @@ function App() {
           <Home />
         </Route>
         <Route path="/register">
-          {currentUser ? <Home /> : <Register />}
+          {user ? <Home /> : <Register />}
         </Route>
-        <Route path="/login">{currentUser ? <Home /> : <Login />}</Route>
+        <Route path="/login">{user ? <Home /> : <Login />}</Route>
         <Route path="/post/:id">
           <Single />
         </Route>
-        <Route path="/write">{currentUser ? <Write /> : <Login />}</Route>
+        <Route path="/write">{user ? <Write /> : <Login />}</Route>
         <Route path="/settings">
-          {currentUser ? <Settings /> : <Login />}
+          {user ? <Settings /> : <Login />}
         </Route>
       </Switch>
    </Router>
