@@ -57,6 +57,5 @@ router.post('/login',async(req,res) => {
   }
 })
 
-// Other authentication-related routes can be added here
 
 module.exports = router;
