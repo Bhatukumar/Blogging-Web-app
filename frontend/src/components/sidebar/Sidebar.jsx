@@ -1,11 +1,12 @@
 import "./sidebar.css"
+import news from "./news.jpeg"
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarItem">
         <span className="sidebarTitle">About me</span>
-        <img src="C:\Users\MANMAY\Desktop\apna college\blogging-web-app\frontend\news.jpeg" alt=""/>
+        <img src={news} alt=""/>
         <p>
            this is sample text
         </p>
